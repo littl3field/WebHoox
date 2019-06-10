@@ -54,6 +54,8 @@ Gunicorn to run your application...
 $ gunicorn --bind 0.0.0.0:5000 WSGI_Server_Main
 ```
 
+This project uses port 5000, you can change this by ammending the App_Main.py variable & above command.
+
 ### IN development
 
 * Argparse 
