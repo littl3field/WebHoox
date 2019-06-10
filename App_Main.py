@@ -18,9 +18,9 @@ root.addHandler(handler)
 #Defining variables to build Ngrok tunnel
 ## This overrides the default ngrok config and builds based on params below
 NAME = "WebHooks"
-CONFIG_PATH = "/Users/Ryan/.ngrok2/ngrok.yml"
+CONFIG_PATH = "/Users/%USER%/.ngrok2/ngrok.yml"
 SUBDOMAIN = {
-    "subdomain": "humio"
+    "subdomain": "TESTCHANGEME"
 }
 ngrok.connect(port=5000, name=NAME, config_path=CONFIG_PATH, options=SUBDOMAIN)
 tunnels = ngrok.get_tunnels()
