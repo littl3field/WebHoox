@@ -48,7 +48,8 @@ tunnels:
 
 ```
 
-***I recommend using a public facing proxy server for production setups, Ngrok should only be used in testing. Comment out (4DEVENV) sections if you are moving to production.
+I recommend using a public facing proxy server for production setups, Ngrok should only be used in testing. Comment out (4DEVENV) sections if you are moving to production.
+_____
 
 Gunicorn to run your application...
 
