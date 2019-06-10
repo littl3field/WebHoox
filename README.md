@@ -32,7 +32,7 @@ Set your secret in an environment variable named WEBHOOK_TOKEN
 $ export WEBHOOK_TOKEN="%SECRETTOKEN%"
 ```
 
-Edit your Ngrok yml file located in /Users/%USER%/.ngrok2/ngrok.yml, see https://ngrok.com/docs for details on how to configure the config you need. Here you can add your API key for premium users. Example:
+When testing in development environment. Edit your Ngrok yml file located in /Users/%USER%/.ngrok2/ngrok.yml, see https://ngrok.com/docs for details on how to configure the config you need. Here you can add your API key for premium users. Example:
 ```sh
 authtoken: %APIKEY%
 region: eu
@@ -47,6 +47,8 @@ tunnels:
     inspect: false
 
 ```
+
+***I recommend using a public facing proxy server for production setups, Ngrok should only be used in testing. Comment out (4DEVENV) sections if you are moving to production.
 
 Gunicorn to run your application...
 
