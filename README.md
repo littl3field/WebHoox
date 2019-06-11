@@ -48,9 +48,6 @@ tunnels:
 
 ```
 
-I recommend using a public facing proxy server for production setups, Ngrok should only be used in testing. Comment out (4DEVENV) sections if you are moving to production.
-_____
-
 Gunicorn to run your application...
 
 ```sh
@@ -59,7 +56,21 @@ $ gunicorn --bind 0.0.0.0:5000 WSGI_Server_Main
 
 This project uses port 5000, you can change this by ammending the "port=" variable & above command.
 
-### IN development
+_____
+
+### Running in production 
+I recommend using a public facing proxy server for production setups, Ngrok should only be used in testing. Comment out (4DEVENV) sections if you are moving to production.
+
+Once you have commented this out, you should create a systemd service unit for gunicorn - you can do this by looking at this guide here: https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
+
+You will then need to allow traffic from the NGINX server on that port:
+
+```sh
+firewall-cmd --permanent --add-port=8000/tcp
+```
+_____
+
+### To Do!
 
 * Argparse 
 * Syslog intergration 
