@@ -74,4 +74,3 @@ _____
 
 * Argparse 
 * Syslog intergration 
-*
