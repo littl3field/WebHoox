@@ -12,7 +12,7 @@ import hashlib
 #Define application
 application = Flask(__name__)
 
-#(4DEVENV)Debug Error Handling for Process Initiation
+#(DEVENV)Debug Error Handling for Process Initiation
 root = logging.getLogger()
 root.setLevel(logging.DEBUG)
 handler = logging.StreamHandler(sys.stdout)
@@ -21,7 +21,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 handler.setFormatter(formatter)
 root.addHandler(handler)
 
-#(4DEVENV)Defining variables to build Ngrok tunnel
+#(DEVENV)Defining variables to build Ngrok tunnel
 ##This overrides the default ngrok config and builds based on params below
 NAME = "RACSN_WebHooks"
 CONFIG_PATH = "/Users/%USERNAME%/.ngrok2/ngrok.yml" #Change %USERNAME% to your username
@@ -29,7 +29,7 @@ SUBDOMAIN = {
     "subdomain": "CHANGEME" #Change this to whatever domain you require 
 }
 
-#(4DEVENV)Build Ngrok Tunnel
+#(DEVENV)Build Ngrok Tunnel
 ngrok.connect(port=5000, name=NAME, config_path=CONFIG_PATH, options=SUBDOMAIN)
 tunnels = ngrok.get_tunnels()
 print(tunnels)
@@ -51,6 +51,7 @@ def get_payload():
             path = '/home/logs.json'
             with open(path, 'a') as f:
                 json.dump(request.json, f)
+            f.close()
             return(log)
     else:
         return("Invalid Hash")
