@@ -48,7 +48,8 @@ def get_payload():
     if verify_token_hash(data, signature):
         if request.headers['content-type'] == 'application/json':
             log = json.dumps(request.json)
-            with open('logs.json', 'w') as f:
+            path = '/home/logs.json'
+            with open(path, 'w') as f:
                 json.dump(request.json, f)
             return(log)
     else:
