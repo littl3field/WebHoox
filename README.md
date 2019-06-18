@@ -2,7 +2,7 @@
 
 *PLEASE NOTE THIS PROJECT STILL IN DEVELOPMENT*
 
-This is a Python Flask application served by Gunicorn that accepts POST requests inbound from WebHooks. This can be utilised for SOCs to ingest logs from services like GitHub, Slack, Bettercloud etc. 
+This is a Python Flask application served by Gunicorn that accepts POST requests inbound from WebHooks. This can be utilised for SOCs to ingest logs to SIEM from services like GitHub, Slack, Bettercloud etc. 
 
 You can run this script from any machine to test web hook collection. This project uses Ngrok to allow for a secure inbound TCP tunnel to a local server for this testing. I recommend that you **DO NOT** use Ngrok for production (Remove DEVEND functions or see ExampleProd). Instead, you may want to create a Public Nginx Reverse Proxy or similar on seperate server to send traffic to this application.
 
