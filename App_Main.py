@@ -49,7 +49,7 @@ def get_payload():
         if request.headers['content-type'] == 'application/json':
             log = json.dumps(request.json)
             path = '/home/logs.json'
-            with open(path, 'w') as f:
+            with open(path, 'a') as f:
                 json.dump(request.json, f)
             return(log)
     else:
