@@ -51,6 +51,7 @@ def get_payload():
             path = '/home/logs.json'
             with open(path, 'a') as f:
                 json.dump(request.json, f)
+                f.write("
             return(log)
     else:
         return("Invalid Hash")
