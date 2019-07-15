@@ -1,3 +1,5 @@
+#For webhooks with not Token/Secret setting, you can set a token within the http content header, and verfy it in the application route function, here is an example:
+
 import logging
 from flask import json
 from flask import request
@@ -14,7 +16,7 @@ def get_payload():
     if (request.headers['content-type'] == 'application/json' and
             request.headers['token'] == 'abc'):
         log = json.dumps(request.json)
-        with open('/home/humiologs.json', 'a') as f:
+        with open('/home/logs.json', 'a') as f:
             json.dump(request.json, f)
             f.write("\n")
             return(log)
