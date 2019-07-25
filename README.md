@@ -56,9 +56,9 @@ This project uses port 5000, you can change this by ammending the "port=" variab
 _____
 
 ### Running in production 
-I recommend using a public facing proxy server for production setups, Ngrok should only be used in testing. Comment out (4DEVENV) sections if you are moving to production.
+I recommend using a public facing proxy server for production setups, Ngrok should only be used in testing. See Production Examples sections if you are moving to production. For secuirty I recommend storing tokens in environemnt variables. 
 
-Once you have commented this out, you should create a systemd service unit for gunicorn - you can do this by looking at this guide here: https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
+If you're using this, you should create a systemd service unit for gunicorn - you can do this by looking at this guide here: https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
 
 You will then need to allow traffic from the NGINX server on that port:
 
