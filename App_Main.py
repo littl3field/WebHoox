@@ -1,6 +1,6 @@
 import os
 import sys
-from pyngrok import ngrok, process #4DEVENV
+from pyngrok import ngrok, process 
 from flask import json
 from flask import request
 from flask import Flask
@@ -12,7 +12,7 @@ import hashlib
 #Define application
 application = Flask(__name__)
 
-#(DEVENV)Debug Error Handling for Process Initiation
+#Debug Error Handling for Process Initiation
 root = logging.getLogger()
 root.setLevel(logging.DEBUG)
 handler = logging.StreamHandler(sys.stdout)
@@ -21,7 +21,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 handler.setFormatter(formatter)
 root.addHandler(handler)
 
-#(DEVENV)Defining variables to build Ngrok tunnel
+#Defining variables to build Ngrok tunnel
 ##This overrides the default ngrok config and builds based on params below
 NAME = "RACSN_WebHooks"
 CONFIG_PATH = "/Users/%USERNAME%/.ngrok2/ngrok.yml" #Change %USERNAME% to your username
@@ -29,7 +29,7 @@ SUBDOMAIN = {
     "subdomain": "CHANGEME" #Change this to whatever domain you require 
 }
 
-#(DEVENV)Build Ngrok Tunnel
+#Build Ngrok Tunnel
 ngrok.connect(port=5000, name=NAME, config_path=CONFIG_PATH, options=SUBDOMAIN)
 tunnels = ngrok.get_tunnels()
 print(tunnels)
