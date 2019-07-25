@@ -18,7 +18,7 @@ TEST
 ### Installation
 Close the script:
 ```sh
-$ git clone https://github.com/rylittlefield/WebHook_SIEM_Logger.git
+$ git clone https://github.com/littl3field/WebHook_SIEM_Logger.git
 ```
 
 Install the dependencies and devDependencies and start the server.
