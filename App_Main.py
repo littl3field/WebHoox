@@ -23,7 +23,7 @@ root.addHandler(handler)
 
 #Defining variables to build Ngrok tunnel
 ##This overrides the default ngrok config and builds based on params below
-NAME = "RACSN_WebHooks"
+NAME = "WebHooks"
 CONFIG_PATH = "/Users/%USERNAME%/.ngrok2/ngrok.yml" #Change %USERNAME% to your username
 SUBDOMAIN = {
     "subdomain": "CHANGEME" #Change this to whatever domain you require 
