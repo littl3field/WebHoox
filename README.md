@@ -1,4 +1,14 @@
-# WebHook SIEM Logger
+# WebHoox
+
+          ██╗    ██╗███████╗██████╗   ██╗  ██╗ ██████╗  ██████╗ ██╗  ██╗
+          ██║    ██║██╔════╝██╔══██╗  ██║  ██║██╔═══██╗██╔═══██╗╚██╗██╔╝
+          ██║ █╗ ██║█████╗  ██████╔╝  ███████║██║   ██║██║   ██║ ╚███╔╝ 
+          ██║███╗██║██╔══╝  ██╔══██╗  ██╔══██║██║   ██║██║   ██║ ██╔██╗ 
+          ╚███╔███╔╝███████╗██████╔╝  ██║  ██║╚██████╔╝╚██████╔╝██╔╝ ██╗
+           ╚══╝╚══╝ ╚══════╝╚═════╝   ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝
+           is a Flask application that allows SOCs to ingest logs to a SIEM from webhooks
+                                                            
+# Info
 
 This is a Python Flask application served by Gunicorn that accepts POST requests inbound from WebHooks. This can be utilised for SOCs to ingest logs to SIEM from services like GitHub, Slack, Bettercloud etc. 
 
